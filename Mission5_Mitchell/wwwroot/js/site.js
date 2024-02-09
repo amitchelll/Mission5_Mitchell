@@ -1,11 +1,19 @@
 ﻿$("#btnsubmit").click(function () {
-    var hours = $("#hours").val();
-    var amount = $("#rate").val();
+    var hours = parseFloat($("#hours").val()); 
+    var amount = parseFloat($("#rate").val()); 
     var calculatedTotal = $("#total");
 
-    calculatedTotal.prop('readonly', false);
+    if (hours < 0) {
+        alert("Please enter a valid number of hours");
+    } else {
+        // Make the input field editable
+        calculatedTotal.prop('readonly', false);
 
-    calculatedTotal.val(hours * amount);
+        // Set the value of the input field
+        calculatedTotal.val(hours * amount);
 
-    calculatedTotal.prop('readonly', true);
+        // Make the input field read-only again
+        calculatedTotal.prop('readonly', true);
+    }
 });
+
