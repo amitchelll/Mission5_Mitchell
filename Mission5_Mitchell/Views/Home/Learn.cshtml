@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Learn How to Get a Little Treat!";
+
+}
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            alert('WARNING! Studies show that just one little treat can lead to a lifetime addiction to a daily little treat. Proceed with caution.');
+        });
+    </script>
+}
+<h1>@ViewData["Title"]</h1>
+
+
+<h3>Alexandra offers tutoring sessions!</h3>
+<p>Join the millions that have graduated and unlock your inner little treat demon.</p>
+
+<form>
+    <label for="hours">Number of Hours: </label>
+    <input type="number" id="hours" min="0">
+    <br>
+    <label for="rate">Hourly Rate: $</label>
+    <input type="text" id="rate" value="20" readonly>
+    <br>
+    <br>
+    <input type="button" id="btnsubmit" value="Calculate Total" />
+    <br>
+    <br> 
+    <label for="total">Total: $</label> 
+    <input type="text" id="total" readonly>
+</form>
+<br /><br />
+<a asp-area="" asp-controller="Home" asp-action="Index">Back to Home</a>
+
+
+
+
+
+<script src="c:\users\allie\source\repos\mission5_mitchell\mission5_mitchell\wwwroot\lib\jquery\dist\jquery.min.js"></script>
+<script src="c:\users\allie\source\repos\mission5_mitchell\mission5_mitchell\wwwroot\js\site.js"></script>
